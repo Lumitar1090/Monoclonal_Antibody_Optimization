@@ -1,13 +1,13 @@
 # Repository Structure
 
-`datasets/`: Store raw data in this directory. Delete `.gitkeep` once you add your own files to this directory.
+`datasets`: Store raw data in this directory. Delete `.gitkeep` once you add your own files to this directory.
 
-`figures/`: Export figures created by your code to this directory. Delete `.gitkeep` once you add your own files to this
+`figures`: Export figures created by your code to this directory. Delete `.gitkeep` once you add your own files to this
 directory.
 
-`src/`: Store all Python code, except main.py, in this directory.
+`src`: Store all Python code, except main.py, in this directory.
 
-`tables/`: Export tables created by your code to this directory. Delete `.gitkeep` once you add your own files to this
+`tables`: Export tables created by your code to this directory. Delete `.gitkeep` once you add your own files to this
 directory.
 
 `.gitignore`: Contains files to be ignored by Git. You can copy the `.gitignore` file from this repository into your own
