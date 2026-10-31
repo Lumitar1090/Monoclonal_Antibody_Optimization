@@ -1,1 +1,10 @@
-This file should contain information about your conda environment.
+name: Monoclonal-antibody-optimization
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9.6
+  - numpy=2.0.2
+  - pandas=2.3.3
+  - matplotlib=3.9.4
+  - scipy
+  - scikit-learn=1.6.1

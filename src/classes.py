@@ -1,15 +1,19 @@
-# =======================================================================
-# CLASSES
-# Define custom classes in this file.
-# =======================================================================
+from pathlib import Path
 
-class Batch:
-    def __init__(self, batch_id, ph_opt, temperature_opt):
-        self.batch_id = batch_id
-        self.ph_opt = ph_opt
-        self.temperature_opt = temperature_opt
+class BatchResultsAnalyzer:
+    def __init__(self, output_directory):
+        self.output_directory = Path(output_directory)
+        self.output_directory.mkdir(parents=True, exist_ok=True)
 
-    def display_info(self):
-        print(f"Batch ID: {self.batch_id:4d} | "
-              f"Optimal pH: {self.ph_opt:4.1f} | "
-              f"Optimal Temperature: {self.temperature_opt:4.1f} C")
+    def save_top_batches(self, optimization_results, n=10):
+        top_batches = optimization_results.sort_values(
+            "Space-Time Profit [$/L/d]",
+            ascending=False,).head(n)
+
+        output_path = self.output_directory / "Top_Batches.csv"
+        top_batches.to_csv(output_path, index=False)
+
+        print(f"Saved: {output_path}")
+        return top_batches
+
+

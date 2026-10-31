@@ -1,7 +1,17 @@
-# =======================================================================
-# CONSTANTS
-# Define constant values that do not change throughout your program.
-# =======================================================================
+## ECON CONSTANTS ##
+# cost coefs.
+GLUCOSE_COST = 10
+GLUTAMINE_COST = 20
+VCD_COST = 0.0005
 
-PH_LIMITS = (6.8, 7.2)
-TEMPERATURE_LIMITS = (35.0, 37.0)
+# culture coef
+MAB_VALUE = 1000
+# bioreactor downtime
+DOWNTIME_DAYS = 1
+
+## PREDICTION INTERVAL CONSTANTS ##
+PREDICTION_INTERVAL = 0.95
+N_SIMULATIONS = 1000
+RANDOM_STATE = 42
+
+
